@@ -1,4 +1,4 @@
-# Simple CLI Todo List App
+# Simple CLI Todo List App with Priority
 
 TODO_FILE = "todo.txt"
 
@@ -13,12 +13,12 @@ def list_tasks(tasks):
         print(f"{i}. {task}")
     print()
 
-def add_task(tasks, task):
-    tasks.append(task)
+def add_task(tasks, task, priority):
+    tasks.append(f"{task} [Priority: {priority}]")
     with open(TODO_FILE, "w") as file:
         for t in tasks:
             file.write(t + "\n")
-    print(f"Task '{task}' added!\n")
+    print(f"Task '{task}' with priority '{priority}' added!\n")
 
 def main():
     tasks = read_tasks()
@@ -29,7 +29,8 @@ def main():
             list_tasks(tasks)
         elif choice == "add":
             task = input("Enter new task: ").strip()
-            add_task(tasks, task)
+            priority = input("Enter priority (High/Medium/Low): ").strip()
+            add_task(tasks, task, priority)
         elif choice == "exit":
             print("Goodbye!")
             break
