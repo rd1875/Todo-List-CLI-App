@@ -2,4 +2,8 @@ Buy groceries
 Read a book
 Finish homework
 Git Practice
+<<<<<<< HEAD
 branching [Priority: High]
+=======
+Branching [Due: 2025-09-27]
+>>>>>>> add-deadline
