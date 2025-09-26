@@ -1,1 +1,3 @@
-
+[X] Conflict Resolution
+[X] Adding Delete Feature [Priority: HIGH] [Due: 2025-09-27]
+[X] Added Done Feature [Priority: HIGH] [Due: 2025-09-26]
